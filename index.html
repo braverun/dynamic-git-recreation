@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+
+<!--Containers-->
+<div class="profile-side-bar">
+</div>
+
+<div class="repo-box">
+<ul class="repositories">
+</ul>
+</div>
+
+
+
+<!--Libraries-->
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="token.js"></script>
+
+
+<!--Repository-->
+<script type="text/template" data-template-name="repo">
+    <li>
+      <a href="<%= html_url %>"><h3><%= name %></h3></a>
+      <%= moment(pushed_at).fromNow() %>
+
+      <a class="right" href="<%= stargazers_url %>"><%= stargazers_count %></a>
+      <a class="right" href="<%= forks_url %>"><%= forks_count %></a>
+      <span class="right"><%= language %></span>
+
+    </li>
+  </script>
+
+
+<!--Sidebar-->
+<script type="text/template" data-template-name="profile">
+<img src="<%= avatar_url %>">
+<h1><%= name %></h1>
+<h1><%= login %></h1>
+
+<%= location %><br />
+<span>Joined on <%= moment(created_at).format('ll') %></span>
+<%= email %> <br />
+<%= blog %>
+</script>
+
+
+<script src="scripts/main.js"></script>
+</body>
+</html>

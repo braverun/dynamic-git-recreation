@@ -1,0 +1,30 @@
+/* ul {
+  width
+}
+ */
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+img {
+  border-radius: 5%;
+  width: 230px;
+  height: 230px; }
+
+.repo-box {
+  display: inline-block;
+  width: 770px;
+  vertical-align: top; }
+
+.right {
+  margin-left: 500px; }
+
+.profile-side-bar {
+  display: inline-block;
+  margin-left: 125px;
+  width: 230px;
+  vertical-align: top; }
+
+/*# sourceMappingURL=main.css.map */
